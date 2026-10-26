@@ -1,0 +1,496 @@
+/* ============================================================
+   无畏契约兴趣站 · 全局样式
+   色调:无畏契约暗色蓝黑底 + 标志红 #ff4655 + 冷白文字
+   ============================================================ */
+
+:root {
+  --bg: #0f1923;            /* 全局深蓝黑背景 */
+  --bg-panel: #1b2733;      /* 卡片/面板底色 */
+  --bg-panel-2: #223240;    /* 更浅一档面板 */
+  --accent: #ff4655;        /* 无畏契约标志红 */
+  --accent-dark: #d93a48;
+  --text: #ece8e1;          /* 冷白主文字 */
+  --text-muted: #8a979f;    /* 次要灰文字 */
+  --border: #2a3a48;
+  --radius: 12px;
+}
+
+/* ---------- 基础重置 ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+}
+
+/* ---------- 页头 ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background-color: #0b1319;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-title {
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+.site-title::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--accent);
+  transform: rotate(45deg);
+}
+
+.site-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer {
+  text-align: center;
+  padding: 26px 20px;
+  background-color: #0b1319;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ---------- 首页:欢迎横幅 ---------- */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 22px;
+  border: 1px solid var(--border);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* ---------- 首页:板块卡片 ---------- */
+.topics h2,
+.skills h2,
+.maps h2,
+.esports h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.topic-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.topic-card {
+  flex: 1 1 280px;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.topic-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.topic-card h3 {
+  font-size: 18px;
+  margin: 16px 20px 6px;
+}
+
+.topic-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 20px 12px;
+}
+
+.topic-card a {
+  margin: 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 卡片内的小图标行 */
+.icon-strip {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  margin: 12px 0;
+}
+
+.icon-strip img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background-color: var(--bg-panel-2);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* ---------- games:页内标题 ---------- */
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title h2 {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.page-title p {
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.section-note {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+/* ---------- games:技能介绍 ---------- */
+.skills, .maps, .esports {
+  margin-bottom: 52px;
+}
+
+.agent {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.agent-head {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.agent-img {
+  width: 140px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.agent-info h3 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.agent-role {
+  color: var(--accent);
+  font-size: 14px;
+  margin: 4px 0 8px;
+}
+
+.agent-desc {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* 技能列表 */
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.skill {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background-color: var(--bg-panel-2);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.skill img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.skill-text h4 {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.skill-key {
+  display: inline-block;
+  min-width: 22px;
+  text-align: center;
+  color: #0f1923;
+  background-color: var(--accent);
+  border-radius: 4px;
+  font-size: 13px;
+  margin-right: 6px;
+  padding: 0 4px;
+  font-weight: bold;
+}
+
+.skill-text p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ---------- games:地图介绍 ---------- */
+.map-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.map {
+  flex: 1 1 320px;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  padding-bottom: 18px;
+}
+
+.map-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.map h3 {
+  font-size: 18px;
+  margin: 14px 20px 6px;
+}
+
+.map p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 20px;
+}
+
+/* ---------- games:电竞模块 ---------- */
+.esports > p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  max-width: 760px;
+}
+
+.esports-gallery {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.esports-gallery img {
+  flex: 1 1 300px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* ---------- 返回顶部按钮 ---------- */
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 12px 18px;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: none;   /* 默认隐藏,由 main.js 控制显隐 */
+  box-shadow: 0 4px 14px rgba(255, 70, 85, 0.4);
+}
+
+.back-to-top:hover {
+  background-color: var(--accent-dark);
+}
+
+/* ---------- reaction:反应测试 ---------- */
+.test-area {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.test-area h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+.test-box {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  letter-spacing: 3px;
+  background-color: var(--bg-panel);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  user-select: none;
+  margin: 20px 0;
+}
+
+/* 等待状态:红色 */
+.test-box.waiting {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* 就绪状态:绿色,此时点击计时 */
+.test-box.ready {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: #0f1923;
+}
+
+.test-result {
+  text-align: center;
+  font-size: 20px;
+  color: var(--accent);
+  min-height: 34px;
+  margin-bottom: 8px;
+}
+
+.test-best {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.test-guide {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.test-guide h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.test-guide li {
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 20px;
+  }
+
+  .skill-list {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-head {
+    flex-direction: column;
+  }
+
+  .agent-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+}
