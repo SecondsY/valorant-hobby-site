@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>无畏契约兴趣站 | 反应测试</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-reaction">
+
+  <!-- 页头:与首页保持一致 -->
+  <header class="site-header">
+    <h1 class="site-title">无畏契约兴趣站</h1>
+    <nav class="site-nav">
+      <a href="index.html">首页</a>
+      <a href="games.html">游戏心得</a>
+      <a href="reaction.html">反应测试</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <h2>反应测试</h2>
+      <p>在射击游戏里,快上几十毫秒,往往就是生与死的差别。</p>
+    </section>
+
+    <section class="test-area">
+      <h2>来测测你的反应速度</h2>
+      <p class="section-note">
+        按下下方区域开始;区域变红后等待,变绿瞬间立刻按下。
+        系统会记录你的反应时间,看看你的最快记录。
+      </p>
+
+      <!-- 测试主区域:三种状态由 main.js 切换 -->
+      <div id="test-box" class="test-box">按下开始</div>
+
+      <p id="result" class="test-result">等待你的第一次测试……</p>
+
+      <!-- 最快记录(由 main.js 更新) -->
+      <p id="best-time" class="test-best">最快记录:—</p>
+
+      <!-- 参考标准 -->
+      <div class="test-guide">
+        <h3>参考标准</h3>
+        <ul>
+          <li>低于 200ms · 职业级</li>
+          <li>200 ~ 250ms · 高手</li>
+          <li>250 ~ 300ms · 普通人平均</li>
+          <li>高于 300ms · 需要热身啦</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>© 2026 无畏契约兴趣站 · 由 HTML/CSS/JS 手工搭建</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
